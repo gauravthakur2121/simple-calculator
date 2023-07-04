@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<style>
+    .calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: antiquewhite;
+  }
+  
+  .calculator input[type="button"] {
+    width: 100%;
+    height: 50px;
+  font-size: 25px;
+    color: white;
+    background-color: rgb(22, 12, 12);
+  }
+  
+  .calculator input[type="text"] {
+    grid-column: 1 / span 4;
+    height: 45px;
+    font-size: 28px;
+    text-align: right;
+    border: 3px solid black;
+    border-radius: 5px;
+  }
+
+</style>
+<body>
+  <div class="calculator">
+    <input type="text" id="result" readonly>
+    <input type="button" value="7" onclick="appendToResult('7')">
+    <input type="button" value="8" onclick="appendToResult('8')">
+    <input type="button" value="9" onclick="appendToResult('9')">
+    <input type="button" value="/" onclick="appendToResult('/')">
+    <input type="button" value="4" onclick="appendToResult('4')">
+    <input type="button" value="5" onclick="appendToResult('5')">
+    <input type="button" value="6" onclick="appendToResult('6')">
+    <input type="button" value="*" onclick="appendToResult('*')">
+    <input type="button" value="1" onclick="appendToResult('1')">
+    <input type="button" value="2" onclick="appendToResult('2')">
+    <input type="button" value="3" onclick="appendToResult('3')">
+    <input type="button" value="-" onclick="appendToResult('-')">
+    <input type="button" value="0" onclick="appendToResult('0')">
+    <input type="button" value="." onclick="appendToResult('.')">
+    <input type="button" value="=" onclick="calculateResult()">
+    <input type="button" value="+" onclick="appendToResult('+')">
+    <input type="button" value="C" onclick="clearResult()">
+  </div>
+
+  <script>
+   
+  </script>
+  <script src="App.js"></script>
+</body>
+</html>
