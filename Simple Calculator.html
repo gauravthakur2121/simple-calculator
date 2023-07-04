@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="./Simple Calculator_files/style.css">
+  
+<style>
+    .calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: antiquewhite;
+  }
+  
+  .calculator input[type="button"] {
+    width: 100%;
+    height: 50px;
+  font-size: 25px;
+    color: white;
+    background-color: rgb(22, 12, 12);
+  }
+  
+  .calculator input[type="text"] {
+    grid-column: 1 / span 4;
+    height: 45px;
+    font-size: 28px;
+    text-align: right;
+    border: 3px solid black;
+    border-radius: 5px;
+  }
+
+</style></head>
+
+<body>
+  <div class="calculator">
+    <input type="text" id="result" readonly="">
+    <input type="button" value="7" onclick="appendToResult(&#39;7&#39;)">
+    <input type="button" value="8" onclick="appendToResult(&#39;8&#39;)">
+    <input type="button" value="9" onclick="appendToResult(&#39;9&#39;)">
+    <input type="button" value="/" onclick="appendToResult(&#39;/&#39;)">
+    <input type="button" value="4" onclick="appendToResult(&#39;4&#39;)">
+    <input type="button" value="5" onclick="appendToResult(&#39;5&#39;)">
+    <input type="button" value="6" onclick="appendToResult(&#39;6&#39;)">
+    <input type="button" value="*" onclick="appendToResult(&#39;*&#39;)">
+    <input type="button" value="1" onclick="appendToResult(&#39;1&#39;)">
+    <input type="button" value="2" onclick="appendToResult(&#39;2&#39;)">
+    <input type="button" value="3" onclick="appendToResult(&#39;3&#39;)">
+    <input type="button" value="-" onclick="appendToResult(&#39;-&#39;)">
+    <input type="button" value="0" onclick="appendToResult(&#39;0&#39;)">
+    <input type="button" value="." onclick="appendToResult(&#39;.&#39;)">
+    <input type="button" value="=" onclick="calculateResult()">
+    <input type="button" value="+" onclick="appendToResult(&#39;+&#39;)">
+    <input type="button" value="C" onclick="clearResult()">
+  </div>
+
+  <script>
+   
+  </script>
+  <script src="./Simple Calculator_files/App.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>
